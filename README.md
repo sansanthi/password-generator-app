@@ -1,3 +1,77 @@
+# Frontend Mentor - Password generator app solution
+
+This is a solution to the [Password generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+
+
+## Overview
+This project is written with HTML, CSS and React. Its purpose is to generate random password basedd on user selected options.  
+
+### The challenge
+Users should be able to:
+
+- Generate a password based on the selected inclusion options
+- Copy the generated password to the computer's clipboard
+- See a strength rating for their generated password
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+### Links
+
+- Solution URL: https://github.com/sansanthi/password-generator-app
+- Live Site URL: https://password-generator-fmentor.netlify.app/
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+
+## My process
+I'm currently learning React and I want practice with React so I built this project React. I am just beginner in React so spliting components may not be perfect. When using useEffect with empty dependecy array it show warning so I use eslint-disable-next-line comment. I think there will have more efficient ways than using this comment. Anyway I am so happy with the result and for finishing project. 
+
+### What I learned
+From building UI for this project I learned how to create custom input range slider and custom checkboxes for the first time and more understanding React when create project by myself. When learning somethig by creating project is a great way to learn. 
+
+-Generate password
+```App.js
+for(let i=0; i< rangeLength; i++) {
+        const index = i % typesCount;
+        const funcName = Object.keys(typesObj)[index];
+        generatedPassword += randomFunc[funcName]();
+}
+```
+```ColorBoxes.js
+    for (let i = 1; i <= highlightedCount[props.type]; i++) {
+        boxes.push(<span key={i} className="box" style={{backgroundColor: highlightedColor, borderColor: highlightedColor }}></span>);
+    }
+
+    // Unhighlighted boxes
+    for (let i = highlightedCount[props.type] + 1; i <= totalCount; i++) {
+        boxes.push(<span key={i} className="box"/>);
+    }
+```
+
+
+### Useful resources
+
+- stackoverflow.com - This helped me to search everyting that I don't know
+- https://codepen.io/dev_loop/pen/vYYxvbz , https://codepen.io/cjr85/pen/LYbqyRK - Password geneartor app that created with JavaScript
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
